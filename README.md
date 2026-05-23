@@ -1,85 +1,134 @@
-# Marketing ROI Portfolio Website
+# Marketing ROI & Budget Optimization
 
-Professional React + Tailwind portfolio website for the project **Marketing ROI & Budget Optimization (Attribution + Regression)**. The site is designed to feel like an executive business analytics case study suitable for recruiters, hiring managers, and interview panels.
+Business Analyst portfolio case study by **Rajvi Desai** focused on marketing attribution, regression modeling, dashboard storytelling, and budget reallocation strategy.
 
-## Stack
+Live site:
+- `https://rajvi-marketing-roi-portfolio.vercel.app`
 
-- React + TypeScript + Vite
+GitHub repository:
+- `https://github.com/rajvidesai/Marketing-ROI-budget-optimization`
+
+## For Recruiters And Interviewers
+
+This project is designed to demonstrate:
+- analytical thinking and KPI framing
+- business problem-solving and recommendation quality
+- ETL and data preparation skills
+- marketing attribution and regression modeling
+- Power BI style dashboard storytelling
+- the ability to translate analysis into executive communication
+
+## Business Problem
+
+The company invests across Search, Paid Social, Email, Referral, and Organic, but lacks a reliable framework to answer two high-value questions:
+- which channels are truly driving revenue
+- how next month's budget should be reallocated without increasing total spend
+
+The project combines last-touch attribution, regression-based elasticity analysis, and an ETL pipeline to produce a decision-ready recommendation.
+
+## What The Website Contains
+
+- executive hero summary with headline KPIs
+- project framing, stakeholder questions, and North Star metric
+- ETL and data architecture explanation
+- KPI and trend analysis
+- attribution analysis
+- regression modeling section
+- budget reallocation strategy
+- dashboard gallery with screenshot support
+- final recommendation and recruiter contact section
+
+## Core Results Highlighted
+
+- `+$1.4M` base-case incremental revenue lift
+- `+12%` expected ROAS improvement
+- `1.58x` Email elasticity in the regression layer
+- Paid Social identified as the main reallocation source due to weak incremental return
+
+## Tech Stack
+
+- React
+- TypeScript
+- Vite
 - Tailwind CSS
 - Framer Motion
 - Recharts
-- Lucide React icons
+- Lucide React
 
-## Run locally
+## Repository Structure
+
+```text
+src/
+  components/        Reusable UI building blocks
+  data/              Central content and chart data
+  hooks/             Theme behavior
+  sections/          Page sections for the case-study narrative
+public/
+  dashboard/         Place Power BI screenshots here
+  resume.pdf         Downloadable resume used by the CTA buttons
+Data/                Curated fact tables for the project
+Raw Data/Marketing ROI & Budget Reallocation (Attribution + Regression)/
+Analysis/            Notebook analysis
+ETL pipeline/        ETL implementation
+Final memo/          Executive memo PDF
+Power BI Dashboard/  Power BI source file
+```
+
+## Dashboard Screenshot Support
+
+The dashboard gallery now supports real screenshots.
+
+To replace the mock frames:
+1. Export dashboard screenshots from Power BI.
+2. Save them in `public/dashboard/`.
+3. Update the matching objects in `src/data/portfolioData.ts`:
+   - `imageSrc`
+   - `imageAlt`
+   - optional `href`
+
+Example:
+
+```ts
+{
+  title: 'Executive Summary View',
+  description: 'KPI tiles, channel health, and the North Star metric in one recruiter-friendly glance.',
+  tag: 'Power BI export',
+  imageSrc: '/dashboard/executive-summary.png',
+  imageAlt: 'Executive summary dashboard screenshot',
+}
+```
+
+## Local Development
+
+Install dependencies:
 
 ```bash
 npm install
+```
+
+Run the dev server:
+
+```bash
 npm run dev
 ```
 
-## Build for production
+Create a production build:
 
 ```bash
 npm run build
 ```
 
-The production output will be generated in `dist/`.
+## Deployment
 
-## Key files to customize
+This project is deploy-ready for Vercel.
 
-- `src/data/portfolioData.ts`
-  Replace your name, email, LinkedIn, GitHub, resume link, and any project copy or numbers you want to change.
-- `public/`
-  Add real assets here such as:
-  - `resume.pdf`
-  - exported Power BI screenshots
-  - personal headshot or logo if desired
-- `index.html`
-  Update SEO metadata, production URL, and Open Graph details before deployment.
-
-## Replacing the dashboard placeholders
-
-1. Export dashboard screenshots from Power BI.
-2. Save them in `public/` or a `public/images/` folder.
-3. Update the `dashboardGallery` data in `src/data/portfolioData.ts`.
-4. If you want true image-based cards, replace the placeholder markup in `src/components/DashboardShotCard.tsx`.
-
-## Resume download setup
-
-The UI includes resume download buttons. To make them live:
-
-1. Place your real resume at `public/resume.pdf`
-2. Change `resumeUrl` in `src/data/portfolioData.ts` to `/resume.pdf`
-
-## Deploy to Vercel
-
-1. Push the project to GitHub.
-2. Import the repository in Vercel.
-3. Framework preset: `Vite`
-4. Build command: `npm run build`
-5. Output directory: `dist`
-
-## Deploy to Netlify
-
-1. Push the project to GitHub.
-2. Create a new Netlify site from the repo.
-3. Build command: `npm run build`
-4. Publish directory: `dist`
-
-## Deploy to GitHub Pages
-
-1. If the site is hosted in a repository subpath, set `VITE_BASE_PATH=/your-repo-name/` during build.
-2. Build the project:
-
-```bash
-$env:VITE_BASE_PATH='/your-repo-name/'
-npm run build
-```
-
-3. Publish the generated `dist/` directory using your preferred GitHub Pages workflow.
+Recommended settings:
+- Framework preset: `Vite`
+- Build command: `npm run build`
+- Output directory: `dist`
 
 ## Notes
 
-- The site uses a central data file so future edits are fast and low-risk.
-- The design includes dark/light mode, smooth scrolling, sticky navigation, scroll-triggered animations, and recruiter-focused copy structure.
-- The charts use realistic dataset-derived values from the existing project files in this workspace.
+- The content layer is centralized in `src/data/portfolioData.ts`, which makes profile edits and KPI updates low-risk.
+- The frontend uses lazy-loaded sections and manual Vite chunking to reduce the size of the primary JS bundle.
+- The GitHub repository includes the Marketing ROI project assets and excludes unrelated case-study folders plus local build artifacts.

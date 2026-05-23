@@ -89,6 +89,9 @@ export type DashboardCard = {
   title: string;
   description: string;
   tag: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  href?: string;
 };
 
 export type Recommendation = {
@@ -107,7 +110,9 @@ export const siteConfig = {
     'The site is designed to help recruiters understand my analytical thinking, technical toolkit, and business storytelling quickly.',
   email: 'desairajvi29@gmail.com',
   linkedIn: 'https://www.linkedin.com/in/rajvi-desai-1356a81b1',
+  linkedInDisplay: 'linkedin.com/in/rajvi-desai-1356a81b1',
   github: 'https://github.com/rajvidesai/Marketing-ROI-budget-optimization',
+  githubDisplay: 'github.com/rajvidesai/Marketing-ROI-budget-optimization',
   resumeUrl: '/resume.pdf',
 };
 
@@ -400,17 +405,17 @@ export const dashboardGallery: DashboardCard[] = [
   {
     title: 'Executive Summary View',
     description: 'KPI tiles, channel health, and the North Star metric in one recruiter-friendly glance.',
-    tag: 'Power BI mock frame',
+    tag: 'Add /dashboard/executive-summary.png',
   },
   {
     title: 'Channel & Campaign Deep Dive',
     description: 'ROAS, CAC, CVR, and campaign-level diagnostics for performance triage.',
-    tag: 'Replace with screenshot',
+    tag: 'Add /dashboard/channel-deep-dive.png',
   },
   {
     title: 'Attribution vs. Regression Lens',
     description: 'Side-by-side measurement views to compare historical ownership with modeled impact.',
-    tag: 'Storytelling panel',
+    tag: 'Add /dashboard/modeling-lens.png',
   },
 ];
 

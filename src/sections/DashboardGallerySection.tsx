@@ -17,7 +17,14 @@ export const DashboardGallerySection = () => (
       <div className="grid gap-6 lg:grid-cols-3">
         {dashboardGallery.map((card, index) => (
           <Reveal key={card.title} delay={index * 0.05}>
-            <DashboardShotCard title={card.title} description={card.description} tag={card.tag} />
+            <DashboardShotCard
+              title={card.title}
+              description={card.description}
+              tag={card.tag}
+              imageSrc={card.imageSrc}
+              imageAlt={card.imageAlt}
+              href={card.href}
+            />
           </Reveal>
         ))}
       </div>
@@ -26,9 +33,9 @@ export const DashboardGallerySection = () => (
         <div className="glass-panel p-6">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Customization Note</p>
           <p className="mt-3 max-w-4xl text-sm leading-7 text-muted">
-            To swap in real visuals later, export screenshots from Power BI, place them in `public/`, and update the
-            dashboard gallery objects in `src/data/portfolioData.ts`. The surrounding recruiter-facing copy will remain
-            intact.
+            Export Power BI screenshots into `public/dashboard/`, then add each file path to the matching
+            `imageSrc` field in `src/data/portfolioData.ts`. The card layout automatically switches from the mock frame
+            to the real screenshot without changing any section code.
           </p>
         </div>
       </Reveal>
