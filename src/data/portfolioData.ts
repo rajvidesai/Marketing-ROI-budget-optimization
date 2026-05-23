@@ -103,11 +103,11 @@ export const siteConfig = {
   name: 'Rajvi Desai',
   roleHeadline: 'Business Analyst | Marketing Analytics | ROI Optimization',
   intro:
-    'I translate messy commercial data into investment decisions, building analytics systems that quantify what drives growth, where budget should shift, and how to communicate those insights clearly to stakeholders.',
+    'I turn messy commercial and marketing data into decision-ready stories, building analytics that show where growth comes from, where budget should move, and how leaders can act with confidence.',
   bio:
-    'This portfolio case study demonstrates my end-to-end business analytics approach across ETL design, KPI definition, attribution logic, regression modeling, dashboard storytelling, and executive recommendation writing.',
+    'This case study shows my end-to-end business analytics approach across ETL design, KPI framing, attribution, regression modeling, dashboard storytelling, and executive recommendation writing.',
   shortNote:
-    'The site is designed to help recruiters understand my analytical thinking, technical toolkit, and business storytelling quickly.',
+    'The portfolio is structured so recruiters and hiring managers can understand my analytical thinking, technical toolkit, and communication style in under a minute.',
   email: 'desairajvi29@gmail.com',
   linkedIn: 'https://www.linkedin.com/in/rajvi-desai-1356a81b1',
   linkedInDisplay: 'linkedin.com/in/rajvi-desai-1356a81b1',
@@ -404,18 +404,24 @@ export const scenarioPlanning: Scenario[] = [
 export const dashboardGallery: DashboardCard[] = [
   {
     title: 'Executive Summary View',
-    description: 'KPI tiles, channel health, and the North Star metric in one recruiter-friendly glance.',
-    tag: 'Add /dashboard/executive-summary.png',
+    description: 'High-level KPI tiles, budget mix, and the North Star metric in one executive-ready dashboard view.',
+    tag: 'Power BI export',
+    imageSrc: '/dashboard/executive-summary.png',
+    imageAlt: 'Executive summary dashboard screenshot',
   },
   {
     title: 'Channel & Campaign Deep Dive',
-    description: 'ROAS, CAC, CVR, and campaign-level diagnostics for performance triage.',
-    tag: 'Add /dashboard/channel-deep-dive.png',
+    description: 'ROAS, CAC, CVR, and campaign-level diagnostics used to identify underperforming investments.',
+    tag: 'Power BI export',
+    imageSrc: '/dashboard/channel-deep-dive.png',
+    imageAlt: 'Channel and campaign performance dashboard screenshot',
   },
   {
     title: 'Attribution vs. Regression Lens',
-    description: 'Side-by-side measurement views to compare historical ownership with modeled impact.',
-    tag: 'Add /dashboard/modeling-lens.png',
+    description: 'Side-by-side measurement views comparing historical revenue ownership with modeled incremental impact.',
+    tag: 'Power BI export',
+    imageSrc: '/dashboard/modeling-lens.png',
+    imageAlt: 'Attribution versus regression dashboard screenshot',
   },
 ];
 

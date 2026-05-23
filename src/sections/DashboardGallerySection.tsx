@@ -9,8 +9,8 @@ export const DashboardGallerySection = () => (
       <Reveal>
         <SectionHeading
           eyebrow="Dashboard Gallery"
-          title="A premium gallery layout ready for your Power BI screenshots and storytelling panels."
-          description="The cards below are styled as polished placeholders so the site deploys beautifully now, while making it easy to replace each frame later with real dashboard exports."
+          title="Power BI dashboard views prepared for real screenshot exports."
+          description="The gallery now points to concrete Power BI export filenames. If a screenshot is present, the card shows it; if not, the layout falls back to the polished mock frame automatically."
         />
       </Reveal>
 
@@ -33,9 +33,9 @@ export const DashboardGallerySection = () => (
         <div className="glass-panel p-6">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Customization Note</p>
           <p className="mt-3 max-w-4xl text-sm leading-7 text-muted">
-            Export Power BI screenshots into `public/dashboard/`, then add each file path to the matching
-            `imageSrc` field in `src/data/portfolioData.ts`. The card layout automatically switches from the mock frame
-            to the real screenshot without changing any section code.
+            Export Power BI screenshots into `public/dashboard/` using these filenames:
+            `executive-summary.png`, `channel-deep-dive.png`, and `modeling-lens.png`. The gallery will automatically
+            switch from the mock frame to the real screenshot without any extra code changes.
           </p>
         </div>
       </Reveal>
