@@ -99,6 +99,11 @@ export type Recommendation = {
   detail: string;
 };
 
+export type StakeholderQuestion = {
+  question: string;
+  decisionAngle: string;
+};
+
 export const siteConfig = {
   name: 'Rajvi Desai',
   roleHeadline: 'Business Analyst | Marketing Analytics | ROI Optimization',
@@ -223,11 +228,27 @@ export const overviewCards: OverviewCard[] = [
   },
 ];
 
-export const stakeholderQuestions = [
-  'Which campaigns are wasting spend through high CAC and weak attributed revenue?',
-  'How do new and returning users behave differently across channels and devices?',
-  'What does attributed ROAS miss that blended performance and regression can explain?',
-  'How much upside is available if spend is shifted from Paid Social into Email and Search?',
+export const stakeholderQuestions: StakeholderQuestion[] = [
+  {
+    question: 'Which campaigns are wasting spend through high CAC and weak attributed revenue?',
+    decisionAngle:
+      'Identify campaigns to pause, reduce, or rework so budget can move toward stronger efficiency pockets.',
+  },
+  {
+    question: 'How do new and returning users behave differently across channels and devices?',
+    decisionAngle:
+      'Separate acquisition and retention behavior to decide where targeting, landing-page, and remarketing efforts should change.',
+  },
+  {
+    question: 'What does attributed ROAS miss that blended performance and regression can explain?',
+    decisionAngle:
+      'Show where last-touch alone underestimates assist channels and where modeled incremental impact changes the budget story.',
+  },
+  {
+    question: 'How much upside is available if spend is shifted from Paid Social into Email and Search?',
+    decisionAngle:
+      'Quantify the expected revenue lift and downside risk before recommending a concrete reallocation plan.',
+  },
 ];
 
 export const northStarMetric = {
@@ -408,6 +429,7 @@ export const dashboardGallery: DashboardCard[] = [
     tag: 'Power BI export',
     imageSrc: '/dashboard/executive-summary.png',
     imageAlt: 'Executive summary dashboard screenshot',
+    href: '/dashboard/executive-summary.png',
   },
   {
     title: 'Channel & Campaign Deep Dive',
@@ -415,6 +437,7 @@ export const dashboardGallery: DashboardCard[] = [
     tag: 'Power BI export',
     imageSrc: '/dashboard/channel-deep-dive.png',
     imageAlt: 'Channel and campaign performance dashboard screenshot',
+    href: '/dashboard/channel-deep-dive.png',
   },
   {
     title: 'Attribution vs. Regression Lens',
@@ -422,6 +445,15 @@ export const dashboardGallery: DashboardCard[] = [
     tag: 'Power BI export',
     imageSrc: '/dashboard/modeling-lens.png',
     imageAlt: 'Attribution versus regression dashboard screenshot',
+    href: '/dashboard/modeling-lens.png',
+  },
+  {
+    title: 'Segments & Opportunities',
+    description: 'New vs. returning user behavior, device-level conversion, and segment insights that support optimization priorities.',
+    tag: 'Power BI export',
+    imageSrc: '/dashboard/segments-opportunities.png',
+    imageAlt: 'Segments and opportunities dashboard screenshot',
+    href: '/dashboard/segments-opportunities.png',
   },
 ];
 
