@@ -1,0 +1,12 @@
+.vercel
+node_modules
+dist
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+
+# Keep the Marketing ROI project assets, but exclude other case-study data folders.
+Raw Data/Checkout Experiment & Growth Analytics System
+Raw Data/Fraud - Anomaly Monitoring & Investigation Dashboard
+Raw Data/Retail Demand Forecasting & Inventory Replenishment Planner
+Raw Data/Subscription Churn Early-Warning & Retention Strategy

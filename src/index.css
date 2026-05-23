@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 33% 97%;
+  --surface: 0 0% 100%;
+  --surface-strong: 216 33% 99%;
+  --foreground: 216 39% 14%;
+  --muted: 214 16% 43%;
+  --border: 214 24% 84%;
+  --primary: 217 78% 45%;
+  --secondary: 173 68% 38%;
+  --success: 146 51% 36%;
+  --warning: 35 89% 54%;
+}
+
+.dark {
+  --background: 220 30% 8%;
+  --surface: 222 23% 12%;
+  --surface-strong: 224 23% 16%;
+  --foreground: 213 31% 95%;
+  --muted: 214 18% 72%;
+  --border: 220 18% 24%;
+  --primary: 206 100% 68%;
+  --secondary: 173 64% 58%;
+  --success: 147 45% 52%;
+  --warning: 36 100% 62%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background font-body text-foreground antialiased;
+  background-image:
+    radial-gradient(circle at top left, rgba(29, 78, 216, 0.08), transparent 34%),
+    radial-gradient(circle at 85% 10%, rgba(20, 184, 166, 0.08), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(245, 247, 250, 1));
+  min-height: 100vh;
+}
+
+.dark body {
+  background-image:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.16), transparent 30%),
+    radial-gradient(circle at 80% 12%, rgba(20, 184, 166, 0.12), transparent 24%),
+    linear-gradient(180deg, rgba(4, 12, 24, 1), rgba(8, 15, 28, 1));
+}
+
+::selection {
+  background: rgba(29, 78, 216, 0.18);
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .glass-panel {
+    @apply rounded-[28px] border border-border/60 bg-surface/80 shadow-glass backdrop-blur-xl;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary;
+  }
+
+  .section-space {
+    @apply py-20 sm:py-24 lg:py-28;
+  }
+}

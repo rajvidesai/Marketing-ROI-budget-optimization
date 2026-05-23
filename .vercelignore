@@ -1,0 +1,14 @@
+node_modules
+dist
+.vercel
+.git
+/Analysis
+/Data
+/ETL pipeline
+/Final memo
+/Power BI Dashboard
+/Raw Data
+Readme (1).md
+*.ipynb
+*.pbix
+*.pdf
