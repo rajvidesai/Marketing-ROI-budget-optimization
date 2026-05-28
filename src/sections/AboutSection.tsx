@@ -46,10 +46,10 @@ export const AboutSection = () => (
           <div className="glass-panel h-full p-8">
             <h3 className="text-2xl font-bold text-foreground">Professional Snapshot</h3>
             <p className="mt-4 text-base leading-8 text-muted">
-              I focus on the part of analytics leaders care about most: converting raw operational data into clear
-              tradeoffs, quantified recommendations, and action-ready narratives. This case study is intentionally
-              structured like a consulting engagement so decision-makers can understand both the technical work and the
-              business judgment behind it.
+              I focus on the part of analytics business leaders care about most: converting raw operational data into
+              clear tradeoffs, quantified findings, and recommendations that can actually be acted on. This case study
+              is structured so decision-makers can understand both the technical execution and the business judgment
+              behind it.
             </p>
             <p className="mt-4 text-base leading-8 text-muted">{siteConfig.shortNote}</p>
 

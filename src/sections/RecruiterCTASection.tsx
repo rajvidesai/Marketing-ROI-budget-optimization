@@ -15,7 +15,7 @@ export const RecruiterCTASection = () => (
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">
                 This portfolio is designed to make my thinking legible quickly: how I frame commercial problems,
-                structure data, evaluate tradeoffs, and turn analysis into clear stakeholder recommendations.
+                structure data, validate evidence, and turn analysis into clear stakeholder recommendations.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -28,6 +28,7 @@ export const RecruiterCTASection = () => (
                 </a>
                 <a
                   href={siteConfig.resumeUrl}
+                  download="Rajvi_Desai_Resume.pdf"
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-border/70 bg-surface/80 px-6 py-3.5 text-sm font-semibold text-foreground transition hover:-translate-y-0.5 hover:border-primary/40 hover:text-primary"
                 >
                   <Download className="h-4 w-4" />
@@ -111,6 +112,7 @@ export const RecruiterCTASection = () => (
               </a>
               <a
                 href={siteConfig.resumeUrl}
+                download="Rajvi_Desai_Resume.pdf"
                 className="rounded-[24px] border border-border/60 bg-surface/70 p-5 transition hover:-translate-y-1 hover:border-primary/40"
               >
                 <div className="flex items-center justify-between gap-3">

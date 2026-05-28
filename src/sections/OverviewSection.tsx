@@ -15,8 +15,8 @@ export const OverviewSection = () => {
         <Reveal>
           <SectionHeading
             eyebrow="Project Overview"
-            title="A marketing investment problem framed like a real consulting case, not a classroom exercise."
-            description="The site tells the story in the same sequence an executive team would consume it: business problem, measurement logic, analytical evidence, and recommendation."
+            title="A marketing investment case structured the way an executive team would want to review it."
+            description="The story moves from business problem to measurement logic to evidence and recommendation so a recruiter can quickly judge both analytical depth and business judgment."
           />
         </Reveal>
 
@@ -48,8 +48,8 @@ export const OverviewSection = () => {
               <div className="mt-8 rounded-[24px] border border-success/20 bg-success/10 p-5">
                 <p className="text-sm font-semibold text-success">Business impact emphasis</p>
                 <p className="mt-2 text-sm leading-7 text-muted">
-                  Leadership does not need another descriptive dashboard. It needs a budget view that quantifies how much
-                  revenue the next dollar is likely to create and where current allocation is inefficient.
+                  Leadership does not need another descriptive dashboard. It needs a view of where the current budget is
+                  inefficient, which channels merit protection, and what should be tested next.
                 </p>
               </div>
             </div>

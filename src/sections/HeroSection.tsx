@@ -28,6 +28,7 @@ export const HeroSection = () => (
                 </a>
                 <a
                   href={siteConfig.resumeUrl}
+                  download="Rajvi_Desai_Resume.pdf"
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-border/70 bg-surface/80 px-6 py-3.5 text-sm font-semibold text-foreground transition hover:-translate-y-0.5 hover:border-primary/40 hover:text-primary"
                 >
                   <Download className="h-4 w-4" />
@@ -49,8 +50,8 @@ export const HeroSection = () => (
                   <span className="rounded-full bg-warning/10 px-3 py-1 text-warning">Budget Reallocation Strategy</span>
                 </div>
                 <p className="mt-4 max-w-2xl text-sm leading-7 text-muted">
-                  This site is designed to help recruiters understand my analytical thinking quickly: the commercial
-                  problem, the data model, the KPI logic, the modeling choices, and the business recommendation.
+                  This site is designed to help recruiters scan the case quickly: the business problem, the data
+                  foundation, the KPI logic, the analytical judgment, and the final recommendation.
                 </p>
               </div>
             </div>
@@ -64,10 +65,10 @@ export const HeroSection = () => (
                 <div className="relative">
                   <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">North Star Metric</p>
                   <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
-                    Incremental Revenue per $ Spent
+                    Revenue Efficiency per $ Spent
                   </h2>
                   <p className="mt-4 max-w-lg text-sm leading-7 text-muted">
-                    A capital allocation framework that separates historical revenue ownership from true spend response.
+                    A business-first framework that anchors the case in verified reporting before using modeling as a challenge layer.
                   </p>
                   <div className="mt-6 flex items-end gap-6">
                     <div>
@@ -75,8 +76,8 @@ export const HeroSection = () => (
                       <p className="mt-2 text-xl font-bold text-foreground">Jul 2025 - Jan 2026</p>
                     </div>
                     <div>
-                      <p className="text-xs uppercase tracking-[0.16em] text-muted">Modeled budget</p>
-                      <p className="mt-2 text-xl font-bold text-foreground">$10.92M</p>
+                      <p className="text-xs uppercase tracking-[0.16em] text-muted">Orders analyzed</p>
+                      <p className="mt-2 text-xl font-bold text-foreground">16,193</p>
                     </div>
                   </div>
                 </div>

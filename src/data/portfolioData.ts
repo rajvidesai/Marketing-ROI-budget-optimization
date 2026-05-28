@@ -108,11 +108,11 @@ export const siteConfig = {
   name: 'Rajvi Desai',
   roleHeadline: 'Business Analyst | Marketing Analytics | ROI Optimization',
   intro:
-    'I turn messy commercial and marketing data into decision-ready stories, building analytics that show where growth comes from, where budget should move, and how leaders can act with confidence.',
+    'I translate marketing and commercial data into clear business decisions, combining ETL, KPI design, and executive storytelling to show where budget is efficient, where it is leaking, and what leaders should do next.',
   bio:
-    'This case study shows my end-to-end business analytics approach across ETL design, KPI framing, attribution, regression modeling, dashboard storytelling, and executive recommendation writing.',
+    'This case study demonstrates my end-to-end business analytics approach across data engineering, KPI framing, attribution, regression diagnostics, dashboard storytelling, and recommendation writing.',
   shortNote:
-    'The portfolio is structured so recruiters and hiring managers can understand my analytical thinking, technical toolkit, and communication style in under a minute.',
+    'The portfolio is structured so recruiters and hiring managers can quickly assess how I frame problems, validate numbers, and communicate decisions.',
   email: 'desairajvi29@gmail.com',
   linkedIn: 'https://www.linkedin.com/in/rajvi-desai-1356a81b1',
   linkedInDisplay: 'linkedin.com/in/rajvi-desai-1356a81b1',
@@ -173,7 +173,7 @@ export const projectTimeline: TimelineEntry[] = [
     title: 'Translate business ambiguity into decision-grade KPIs',
     description:
       'Defined the capital allocation problem, aligned on the North Star metric, and structured stakeholder questions around efficiency, channel roles, and revenue impact.',
-    outcome: 'A clear investment thesis with incremental revenue per dollar spent as the anchor.',
+    outcome: 'A clear investment thesis anchored in measurable revenue efficiency and business tradeoffs.',
   },
   {
     phase: '02',
@@ -186,18 +186,18 @@ export const projectTimeline: TimelineEntry[] = [
   {
     phase: '03',
     period: 'Measurement',
-    title: 'Compare heuristic attribution with modeled incremental impact',
+    title: 'Separate descriptive reporting from model-based diagnostics',
     description:
-      'Used last-touch attribution for transparent bottom-funnel reporting and log-log regression to estimate spend elasticity with seasonality controls.',
-    outcome: 'A balanced view of both historical conversion ownership and forward-looking spend response.',
+      'Used last-touch attribution for transparent channel reporting and a regression layer as a directional check on how spend response may differ from simple historical ownership.',
+    outcome: 'A cleaner distinction between what the data directly proves and what the business should validate through testing.',
   },
   {
     phase: '04',
     period: 'Recommendation',
     title: 'Convert analytics into a budget reallocation plan executives can act on',
     description:
-      'Synthesized channel tradeoffs, risk assumptions, and expected scenarios into a consulting-style recommendation memo and dashboard narrative.',
-    outcome: 'A practical strategy to redirect spend without increasing total budget.',
+      'Synthesized channel tradeoffs, operational risks, and measurement caveats into a recommendation memo and dashboard narrative built for decision-makers.',
+    outcome: 'A practical reallocation thesis designed for pilot testing before full rollout.',
   },
 ];
 
@@ -205,13 +205,13 @@ export const overviewCards: OverviewCard[] = [
   {
     title: 'Business Problem',
     description:
-      'Marketing spend was distributed across Search, Paid Social, Email, Referral, and Organic without a clear framework for incremental impact.',
+      'Marketing investment across Search, Paid Social, Email, Referral, and Organic lacked a clear framework for separating efficient spend from budget leakage.',
     stat: '$74M+ analyzed spend and revenue footprint',
   },
   {
     title: 'Project Objective',
     description:
-      'Identify which channels and campaigns deserve more capital, which are saturated, and how to improve return without increasing total budget.',
+      'Identify which channels and campaigns merit more capital, which appear saturated, and how to improve return without asking for more budget.',
     stat: 'Fixed-budget optimization',
   },
   {
@@ -223,7 +223,7 @@ export const overviewCards: OverviewCard[] = [
   {
     title: 'Business Impact',
     description:
-      'Produced a decision-ready budget reallocation thesis supported by attribution, regression diagnostics, dashboarding, and measured channel inefficiency.',
+      'Produced a budget reallocation thesis supported by verified KPI evidence, regression diagnostics, dashboarding, and a clear test-and-monitoring plan.',
     stat: '20.59-point Paid Social efficiency gap surfaced',
   },
 ];
@@ -242,19 +242,19 @@ export const stakeholderQuestions: StakeholderQuestion[] = [
   {
     question: 'What does attributed ROAS miss that blended performance and regression can explain?',
     decisionAngle:
-      'Show where last-touch alone underestimates assist channels and where modeled incremental impact changes the budget story.',
+      'Show where last-touch reporting is incomplete, where descriptive portfolio performance adds context, and where the model should only be used as a challenge layer.',
   },
   {
     question: 'How much upside is available if spend is shifted from Paid Social into Email and Search?',
     decisionAngle:
-      'Quantify the expected revenue lift and downside risk before recommending a concrete reallocation plan.',
+      'Decide whether the reallocation thesis is strong enough to pilot, what the downside risks are, and which metrics should be monitored after launch.',
   },
 ];
 
 export const northStarMetric = {
   title: 'Revenue Efficiency per $ Spent',
   description:
-    'The descriptive reporting layer anchors the case in verified spend and revenue, while the regression layer is used as a directional sensitivity check rather than a standalone budget-allocation engine.',
+    'The reporting layer anchors the case in verified spend and revenue, while the regression layer is used as a directional sensitivity check rather than a standalone budget engine.',
 };
 
 export const dataSources: DataSource[] = [
@@ -389,7 +389,7 @@ export const regressionImpacts: RegressionImpact[] = [
     feature: 'Paid Social',
     coefficient: 1.05,
     narrative:
-      'The saved notebook output shows a positive coefficient, but it conflicts with the channel’s weak descriptive ROAS and should be treated cautiously.',
+      'The saved notebook output shows a positive coefficient, but it conflicts with the channel\'s weak descriptive ROAS and should be treated cautiously.',
   },
   {
     feature: 'Search',
@@ -405,7 +405,7 @@ export const regressionImpacts: RegressionImpact[] = [
     feature: 'Email',
     coefficient: -3.71,
     narrative:
-      'The negative sign conflicts with Email’s observed ROAS, signaling multicollinearity or endogeneity rather than a trustworthy causal effect.',
+      'The negative sign conflicts with Email\'s observed ROAS, signaling multicollinearity or endogeneity rather than a trustworthy causal effect.',
   },
 ];
 
@@ -473,21 +473,22 @@ export const recommendations: Recommendation[] = [
   {
     title: 'Reduce overspend in Paid Social',
     detail:
-      'Paid Social remained important for discovery but underperformed on descriptive ROAS and revenue share, making it the clearest place to investigate controlled spend reduction.',
+      'Paid Social still matters for discovery, but its descriptive ROAS and revenue share lagged its budget weight, making it the clearest place to investigate controlled spend reduction.',
   },
   {
     title: 'Increase Email investment carefully',
     detail:
-      'Email combined strong observed ROAS with a small spend base, but the regression output was unstable, so scale should happen through measured testing rather than blind expansion.',
+      'Email combined strong observed ROAS with a small spend base, but the regression output was unstable, so any scale-up should happen through measured testing rather than blind expansion.',
   },
   {
     title: 'Protect Search as a capture layer',
     detail:
-      'Search delivered the largest revenue base and the most internally consistent performance signal, so it should remain protected as the core demand-capture layer.',
+      'Search delivered the largest revenue base and the most internally consistent signal across reporting and diagnostics, so it should remain the core demand-capture layer.',
   },
   {
     title: 'Operationalize testing and monitoring',
     detail:
-      'Recommended weekly pacing checks, fatigue monitoring, and structured incrementality tests to validate any reallocation before locking in a new budget mix.',
+      'Use weekly pacing checks, fatigue monitoring, and structured incrementality tests to validate any reallocation before locking in a new budget mix.',
   },
 ];
+
