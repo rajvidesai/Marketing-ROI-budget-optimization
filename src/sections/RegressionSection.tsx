@@ -12,8 +12,8 @@ export const RegressionSection = () => (
       <Reveal>
         <SectionHeading
           eyebrow="Regression Modeling"
-          title="A forward-looking model to estimate marginal revenue response, not just historical reporting."
-          description="The regression layer complements attribution by estimating how daily revenue responds to channel spend after accounting for promotional periods and seasonality."
+          title="A diagnostic model used to pressure-test the story from descriptive reporting."
+          description="The regression layer is included as a sensitivity check on channel behavior after controlling for timing and promotional effects, not as a standalone causal proof."
         />
       </Reveal>
 
@@ -54,9 +54,9 @@ export const RegressionSection = () => (
             <div className="mt-8 rounded-[24px] border border-warning/20 bg-warning/10 p-5">
               <p className="text-sm font-semibold text-warning">Interpretation summary</p>
               <p className="mt-2 text-sm leading-7 text-muted">
-                The model shows diminishing returns across channels but materially stronger elasticity for Email and
-                Search. Paid Social appears saturated relative to its budget share, which supports a reallocation
-                recommendation rather than a full channel cut.
+                Some saved coefficients conflict with the observed KPI layer, especially for Email. That makes the
+                regression useful for challenge and discussion, but not strong enough to replace descriptive channel
+                evidence or controlled incrementality testing.
               </p>
             </div>
           </div>
@@ -67,7 +67,7 @@ export const RegressionSection = () => (
             <div className="flex items-center justify-between gap-4">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Feature Impact</p>
-                <h3 className="mt-2 text-2xl font-bold text-foreground">Relative modeled elasticity</h3>
+                <h3 className="mt-2 text-2xl font-bold text-foreground">Saved coefficient output by channel</h3>
               </div>
             </div>
             <div className="mt-8 h-[360px]">

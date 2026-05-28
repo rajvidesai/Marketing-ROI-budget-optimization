@@ -20,7 +20,7 @@ export const BudgetSection = () => (
         <SectionHeading
           eyebrow="Budget Reallocation Strategy"
           title="A consulting-style recommendation that moves money with discipline, not guesswork."
-          description="The recommendation balances historical performance, regression elasticity, and the practical risk of starving upper-funnel discovery. It is designed to read like an executive recommendation slide."
+          description="The recommendation is grounded first in verified descriptive performance, then pressure-tested with the regression diagnostic and practical channel-risk considerations."
         />
       </Reveal>
 
@@ -77,12 +77,12 @@ export const BudgetSection = () => (
               </p>
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 <div className="rounded-[22px] border border-success/20 bg-success/10 p-4">
-                  <p className="text-sm font-semibold text-success">Expected uplift</p>
-                  <p className="mt-2 text-3xl font-extrabold text-foreground">+$1.4M</p>
+                  <p className="text-sm font-semibold text-success">Measured opportunity</p>
+                  <p className="mt-2 text-3xl font-extrabold text-foreground">-20.59 pts</p>
                 </div>
                 <div className="rounded-[22px] border border-primary/20 bg-primary/10 p-4">
                   <p className="text-sm font-semibold text-primary">Strategic rationale</p>
-                  <p className="mt-2 text-sm leading-7 text-muted">Reward channels with stronger close rates and modeled response.</p>
+                  <p className="mt-2 text-sm leading-7 text-muted">Shift testing attention toward channels with stronger observed efficiency and more stable capture behavior.</p>
                 </div>
               </div>
             </div>

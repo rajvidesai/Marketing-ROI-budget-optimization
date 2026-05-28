@@ -62,8 +62,8 @@ export type ChannelPoint = {
 
 export type AttributionPoint = {
   channel: string;
-  attributedRoas: number;
-  blendedRoas: number;
+  spendShare: number;
+  revenueShare: number;
   interpretation: string;
 };
 
@@ -132,24 +132,24 @@ export const navItems: NavItem[] = [
 
 export const heroMetrics: MetricCard[] = [
   {
-    label: 'Expected ROAS Improvement',
-    value: '+12%',
-    detail: 'Base-case uplift from reallocating budget under a fixed spend cap.',
+    label: 'Marketing Spend Analyzed',
+    value: '$74.47M',
+    detail: 'Verified directly from the raw ad spend file and matched to the cleaned fact tables.',
   },
   {
-    label: 'Incremental Revenue Impact',
-    value: '$1.4M',
-    detail: 'Monthly lift projected by the recommended channel mix.',
+    label: 'Clean Revenue Base',
+    value: '$102.11M',
+    detail: 'Channel and campaign reporting layer revenue after ETL cleanup and aggregation.',
   },
   {
-    label: 'Budget Optimization Shift',
-    value: '18.4 pts',
-    detail: 'Paid Social budget moved toward higher-efficiency channels.',
+    label: 'Blended Portfolio ROAS',
+    value: '1.37x',
+    detail: 'Computed as cleaned revenue divided by total marketing spend across the full portfolio.',
   },
   {
-    label: 'Attribution Insight',
-    value: '1.58x',
-    detail: 'Email showed the strongest modeled elasticity in the regression layer.',
+    label: 'Paid Social Gap',
+    value: '-20.59 pts',
+    detail: 'Paid Social consumed 38.44% of spend but delivered only 17.84% of attributed revenue.',
   },
 ];
 
@@ -223,8 +223,8 @@ export const overviewCards: OverviewCard[] = [
   {
     title: 'Business Impact',
     description:
-      'Produced a decision-ready budget reallocation plan supported by attribution, regression, dashboarding, and scenario-based business recommendations.',
-    stat: '+$1.4M base-case monthly uplift',
+      'Produced a decision-ready budget reallocation thesis supported by attribution, regression diagnostics, dashboarding, and measured channel inefficiency.',
+    stat: '20.59-point Paid Social efficiency gap surfaced',
   },
 ];
 
@@ -252,9 +252,9 @@ export const stakeholderQuestions: StakeholderQuestion[] = [
 ];
 
 export const northStarMetric = {
-  title: 'Incremental Revenue per $ Spent',
+  title: 'Revenue Efficiency per $ Spent',
   description:
-    'The analysis optimizes for marginal impact rather than simple historical averages, allowing leadership to reallocate budget based on expected response, not only reported revenue ownership.',
+    'The descriptive reporting layer anchors the case in verified spend and revenue, while the regression layer is used as a directional sensitivity check rather than a standalone budget-allocation engine.',
 };
 
 export const dataSources: DataSource[] = [
@@ -335,21 +335,31 @@ export const channelPerformance: ChannelPoint[] = [
 export const attributionComparison: AttributionPoint[] = [
   {
     channel: 'Paid Social',
-    attributedRoas: 0.64,
-    blendedRoas: 3.63,
-    interpretation: 'Acts as a discovery engine with strong assist value but weak closing power.',
+    spendShare: 38.44,
+    revenueShare: 17.84,
+    interpretation:
+      'The clearest efficiency gap in the portfolio: high budget concentration but materially lower attributed revenue share.',
   },
   {
     channel: 'Search',
-    attributedRoas: 1.29,
-    blendedRoas: 3.04,
-    interpretation: 'Core revenue driver with both direct capture and dependable demand harvest.',
+    spendShare: 46.13,
+    revenueShare: 43.3,
+    interpretation:
+      'Search absorbs the most spend and still returns the largest revenue share, making it the most stable capture layer.',
   },
   {
     channel: 'Email',
-    attributedRoas: 4.99,
-    blendedRoas: 26.64,
-    interpretation: 'High-intent closer that performs best when upstream channels keep the funnel warm.',
+    spendShare: 5.14,
+    revenueShare: 18.7,
+    interpretation:
+      'A small-budget closer with outsized revenue contribution, which is why it remains a strong expansion candidate for testing.',
+  },
+  {
+    channel: 'Organic',
+    spendShare: 1.29,
+    revenueShare: 11.93,
+    interpretation:
+      'Organic contributes far more revenue share than spend share, reinforcing that not all high-value channels come from paid investment.',
   },
 ];
 
@@ -376,24 +386,26 @@ export const regressionFeatures = [
 
 export const regressionImpacts: RegressionImpact[] = [
   {
-    feature: 'Email Spend',
-    coefficient: 1.58,
-    narrative: 'Strongest elasticity, indicating room to scale within the observed budget range.',
+    feature: 'Paid Social',
+    coefficient: 1.05,
+    narrative:
+      'The saved notebook output shows a positive coefficient, but it conflicts with the channel’s weak descriptive ROAS and should be treated cautiously.',
   },
   {
-    feature: 'Search Spend',
-    coefficient: 1.12,
-    narrative: 'Reliable demand capture channel with positive marginal lift and manageable saturation.',
+    feature: 'Search',
+    coefficient: 0.81,
+    narrative: 'Search is directionally the most consistent across both the descriptive KPI layer and the regression diagnostic.',
   },
   {
-    feature: 'Promo Flag',
-    coefficient: 0.48,
-    narrative: 'Promotional periods explain a meaningful share of short-term conversion volatility.',
+    feature: 'Referral',
+    coefficient: -0.12,
+    narrative: 'Referral shows limited standalone incremental signal in the saved model output and should not drive budget decisions alone.',
   },
   {
-    feature: 'Paid Social Spend',
-    coefficient: 0.34,
-    narrative: 'Lower incremental response suggests mature saturation and weaker bottom-funnel payoff.',
+    feature: 'Email',
+    coefficient: -3.71,
+    narrative:
+      'The negative sign conflicts with Email’s observed ROAS, signaling multicollinearity or endogeneity rather than a trustworthy causal effect.',
   },
 ];
 
@@ -406,19 +418,19 @@ export const allocationComparison: AllocationPoint[] = [
 
 export const scenarioPlanning: Scenario[] = [
   {
-    name: 'Best Case',
-    uplift: '+$2.2M',
-    detail: 'If higher-intent traffic sustains CVR and Email scales without meaningful fatigue.',
+    name: 'Orders in scope',
+    uplift: '16,193',
+    detail: 'Cleaned conversion events retained in the channel and campaign reporting layer.',
   },
   {
-    name: 'Base Case',
-    uplift: '+$1.4M',
-    detail: 'Expected monthly lift under modeled elasticity and fixed total spend.',
+    name: 'Session CVR',
+    uplift: '2.46%',
+    detail: 'Computed from 16,193 cleaned orders over 657,820 fact-session rows.',
   },
   {
-    name: 'Worst Case',
-    uplift: '+$0.5M',
-    detail: 'If channel saturation appears earlier and upper-funnel assistance declines.',
+    name: 'Portfolio AOV',
+    uplift: '$6.31K',
+    detail: 'Average order value based on the cleaned channel and campaign reporting layer.',
   },
 ];
 
@@ -461,21 +473,21 @@ export const recommendations: Recommendation[] = [
   {
     title: 'Reduce overspend in Paid Social',
     detail:
-      'Paid Social remained important for discovery but underperformed on last-touch ROAS and showed weak incremental elasticity, making it the primary source of reallocation capital.',
+      'Paid Social remained important for discovery but underperformed on descriptive ROAS and revenue share, making it the clearest place to investigate controlled spend reduction.',
   },
   {
     title: 'Increase Email investment carefully',
     detail:
-      'Email combined strong attributed performance with the highest modeled coefficient, making it the strongest candidate for profitable scale.',
+      'Email combined strong observed ROAS with a small spend base, but the regression output was unstable, so scale should happen through measured testing rather than blind expansion.',
   },
   {
     title: 'Protect Search as a capture layer',
     detail:
-      'Search delivered the largest revenue base and dependable modeled response, so the plan preserves and modestly expands its role in the final mix.',
+      'Search delivered the largest revenue base and the most internally consistent performance signal, so it should remain protected as the core demand-capture layer.',
   },
   {
     title: 'Operationalize testing and monitoring',
     detail:
-      'Recommended weekly pacing checks, fatigue monitoring, and incremental experiment design to validate the reallocation in production.',
+      'Recommended weekly pacing checks, fatigue monitoring, and structured incrementality tests to validate any reallocation before locking in a new budget mix.',
   },
 ];

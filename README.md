@@ -40,10 +40,10 @@ The project combines last-touch attribution, regression-based elasticity analysi
 
 ## Core Results Highlighted
 
-- `+$1.4M` base-case incremental revenue lift
-- `+12%` expected ROAS improvement
-- `1.58x` Email elasticity in the regression layer
-- Paid Social identified as the main reallocation source due to weak incremental return
+- `$74.47M` verified marketing spend analyzed
+- `$102.11M` cleaned reporting-layer revenue across the channel and campaign facts
+- `1.37x` blended portfolio ROAS from the cleaned reporting layer
+- Paid Social identified as the clearest inefficiency with `38.44%` of spend but only `17.84%` of attributed revenue
 
 ## Tech Stack
 

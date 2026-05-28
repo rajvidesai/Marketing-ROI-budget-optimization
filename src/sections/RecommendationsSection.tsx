@@ -41,12 +41,12 @@ export const RecommendationsSection = () => (
               <p className="mt-3 text-2xl font-bold text-foreground">Overspend was concentrated in Paid Social.</p>
             </div>
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Expected Impact</p>
-              <p className="mt-3 text-2xl font-bold text-foreground">+$1.4M base-case monthly uplift.</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Measured Gap</p>
+              <p className="mt-3 text-2xl font-bold text-foreground">38.44% spend share vs. 17.84% revenue share.</p>
             </div>
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Next Step</p>
-              <p className="mt-3 text-2xl font-bold text-foreground">Pilot reallocation and validate lift weekly.</p>
+              <p className="mt-3 text-2xl font-bold text-foreground">Pilot reallocation and validate performance weekly.</p>
             </div>
           </div>
         </div>

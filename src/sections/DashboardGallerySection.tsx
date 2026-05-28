@@ -28,17 +28,6 @@ export const DashboardGallerySection = () => (
           </Reveal>
         ))}
       </div>
-
-      <Reveal>
-        <div className="glass-panel p-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Customization Note</p>
-          <p className="mt-3 max-w-4xl text-sm leading-7 text-muted">
-            The portfolio is currently wired to four screenshot files in `public/dashboard/`: `executive-summary.png`,
-            `channel-deep-dive.png`, `modeling-lens.png`, and `segments-opportunities.png`. Replacing any of those
-            files updates the gallery instantly without changing component code.
-          </p>
-        </div>
-      </Reveal>
     </div>
   </section>
 );

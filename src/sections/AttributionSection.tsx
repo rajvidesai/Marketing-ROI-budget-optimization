@@ -22,7 +22,7 @@ export const AttributionSection = () => (
         <SectionHeading
           eyebrow="Attribution Analysis"
           title="A side-by-side view of what channels close revenue versus what channels assist the journey."
-          description="Last-touch attribution offers clarity on revenue ownership, while blended performance reminds the business not to starve upper-funnel channels that create demand upstream."
+          description="This view compares where budget went versus where attributed revenue showed up, making channel imbalances visible before any modeling assumptions are introduced."
         />
       </Reveal>
 
@@ -31,8 +31,8 @@ export const AttributionSection = () => (
           <div className="glass-panel p-8">
             <div className="flex items-center justify-between gap-4">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">ROAS Comparison</p>
-                <h3 className="mt-2 text-2xl font-bold text-foreground">Attributed vs. blended ROAS</h3>
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Share Comparison</p>
+                <h3 className="mt-2 text-2xl font-bold text-foreground">Spend share vs. attributed revenue share</h3>
               </div>
             </div>
 
@@ -51,8 +51,8 @@ export const AttributionSection = () => (
                     }}
                   />
                   <Legend />
-                  <Bar dataKey="attributedRoas" fill="#2563eb" radius={[10, 10, 0, 0]} name="Attributed ROAS" />
-                  <Bar dataKey="blendedRoas" fill="#0f766e" radius={[10, 10, 0, 0]} name="Blended ROAS" />
+                  <Bar dataKey="spendShare" fill="#2563eb" radius={[10, 10, 0, 0]} name="Spend Share %" />
+                  <Bar dataKey="revenueShare" fill="#0f766e" radius={[10, 10, 0, 0]} name="Revenue Share %" />
                 </BarChart>
               </ResponsiveContainer>
             </div>
@@ -68,7 +68,7 @@ export const AttributionSection = () => (
                   <div className="flex items-center justify-between gap-3">
                     <h3 className="text-lg font-bold text-foreground">{item.channel}</h3>
                     <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
-                      {item.attributedRoas.toFixed(2)}x vs. {item.blendedRoas.toFixed(2)}x
+                      {item.spendShare.toFixed(2)}% vs. {item.revenueShare.toFixed(2)}%
                     </span>
                   </div>
                   <p className="mt-3 text-sm leading-7 text-muted">{item.interpretation}</p>
