@@ -12,7 +12,7 @@ export const RecommendationsSection = () => (
         <SectionHeading
           eyebrow="Final Business Recommendations"
           title="An executive summary that closes the case with findings, actions, and next steps."
-          description="This final section distills the case into the three questions recruiters care about most: what was learned, what should change, and how the business should validate the recommendation."
+          description="What changed, what should happen next, and how to validate it."
         />
       </Reveal>
 

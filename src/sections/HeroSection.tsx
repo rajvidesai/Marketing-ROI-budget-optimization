@@ -50,8 +50,7 @@ export const HeroSection = () => (
                   <span className="rounded-full bg-warning/10 px-3 py-1 text-warning">Budget Reallocation Strategy</span>
                 </div>
                 <p className="mt-4 max-w-2xl text-sm leading-7 text-muted">
-                  This site is designed to help recruiters scan the case quickly: the business problem, the data
-                  foundation, the KPI logic, the analytical judgment, and the final recommendation.
+                  Built for a 20-second skim: problem, evidence, recommendation.
                 </p>
               </div>
             </div>
@@ -68,7 +67,7 @@ export const HeroSection = () => (
                     Revenue Efficiency per $ Spent
                   </h2>
                   <p className="mt-4 max-w-lg text-sm leading-7 text-muted">
-                    A business-first framework that anchors the case in verified reporting before using modeling as a challenge layer.
+                    Start with verified reporting, then use modeling as a directional check.
                   </p>
                   <div className="mt-6 flex items-end gap-6">
                     <div>

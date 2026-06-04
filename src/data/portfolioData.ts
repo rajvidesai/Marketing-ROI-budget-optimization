@@ -108,11 +108,11 @@ export const siteConfig = {
   name: 'Rajvi Desai',
   roleHeadline: 'Business Analyst | Marketing Analytics | ROI Optimization',
   intro:
-    'I translate marketing and commercial data into clear business decisions, combining ETL, KPI design, and executive storytelling to show where budget is efficient, where it is leaking, and what leaders should do next.',
+    'I turn marketing and commercial data into clear decisions on budget, performance, and growth.',
   bio:
-    'This case study demonstrates my end-to-end business analytics approach across data engineering, KPI framing, attribution, regression diagnostics, dashboard storytelling, and recommendation writing.',
+    'This case study shows how I move from raw data to KPI framing, analysis, dashboards, and business recommendations.',
   shortNote:
-    'The portfolio is structured so recruiters and hiring managers can quickly assess how I frame problems, validate numbers, and communicate decisions.',
+    'Built for fast review: problem, evidence, recommendation.',
   email: 'desairajvi29@gmail.com',
   linkedIn: 'https://www.linkedin.com/in/rajvi-desai-1356a81b1',
   linkedInDisplay: 'linkedin.com/in/rajvi-desai-1356a81b1',
@@ -173,7 +173,7 @@ export const projectTimeline: TimelineEntry[] = [
     title: 'Translate business ambiguity into decision-grade KPIs',
     description:
       'Defined the capital allocation problem, aligned on the North Star metric, and structured stakeholder questions around efficiency, channel roles, and revenue impact.',
-    outcome: 'A clear investment thesis anchored in measurable revenue efficiency and business tradeoffs.',
+    outcome: 'A clear investment thesis tied to measurable revenue efficiency.',
   },
   {
     phase: '02',
@@ -188,16 +188,16 @@ export const projectTimeline: TimelineEntry[] = [
     period: 'Measurement',
     title: 'Separate descriptive reporting from model-based diagnostics',
     description:
-      'Used last-touch attribution for transparent channel reporting and a regression layer as a directional check on how spend response may differ from simple historical ownership.',
-    outcome: 'A cleaner distinction between what the data directly proves and what the business should validate through testing.',
+      'Used last-touch attribution for transparent reporting and regression as a directional challenge layer.',
+    outcome: 'A clear split between verified evidence and testable hypotheses.',
   },
   {
     phase: '04',
     period: 'Recommendation',
     title: 'Convert analytics into a budget reallocation plan executives can act on',
     description:
-      'Synthesized channel tradeoffs, operational risks, and measurement caveats into a recommendation memo and dashboard narrative built for decision-makers.',
-    outcome: 'A practical reallocation thesis designed for pilot testing before full rollout.',
+      'Converted channel tradeoffs, risks, and caveats into a recommendation memo and dashboard narrative.',
+    outcome: 'A reallocation thesis ready for pilot testing.',
   },
 ];
 
@@ -205,13 +205,13 @@ export const overviewCards: OverviewCard[] = [
   {
     title: 'Business Problem',
     description:
-      'Marketing investment across Search, Paid Social, Email, Referral, and Organic lacked a clear framework for separating efficient spend from budget leakage.',
+      'Spend was spread across five channels without a reliable way to separate efficient investment from budget leakage.',
     stat: '$74M+ analyzed spend and revenue footprint',
   },
   {
     title: 'Project Objective',
     description:
-      'Identify which channels and campaigns merit more capital, which appear saturated, and how to improve return without asking for more budget.',
+      'Identify where to scale, where to cut back, and how to improve return without raising total spend.',
     stat: 'Fixed-budget optimization',
   },
   {
@@ -223,7 +223,7 @@ export const overviewCards: OverviewCard[] = [
   {
     title: 'Business Impact',
     description:
-      'Produced a budget reallocation thesis supported by verified KPI evidence, regression diagnostics, dashboarding, and a clear test-and-monitoring plan.',
+      'Produced a reallocation thesis supported by verified KPIs, diagnostics, dashboards, and a monitoring plan.',
     stat: '20.59-point Paid Social efficiency gap surfaced',
   },
 ];
@@ -242,19 +242,19 @@ export const stakeholderQuestions: StakeholderQuestion[] = [
   {
     question: 'What does attributed ROAS miss that blended performance and regression can explain?',
     decisionAngle:
-      'Show where last-touch reporting is incomplete, where descriptive portfolio performance adds context, and where the model should only be used as a challenge layer.',
+      'Show what last-touch misses, what the KPI layer clarifies, and where the model should stay directional.',
   },
   {
     question: 'How much upside is available if spend is shifted from Paid Social into Email and Search?',
     decisionAngle:
-      'Decide whether the reallocation thesis is strong enough to pilot, what the downside risks are, and which metrics should be monitored after launch.',
+      'Decide whether the reallocation thesis is strong enough to pilot and which risks should be monitored.',
   },
 ];
 
 export const northStarMetric = {
   title: 'Revenue Efficiency per $ Spent',
   description:
-    'The reporting layer anchors the case in verified spend and revenue, while the regression layer is used as a directional sensitivity check rather than a standalone budget engine.',
+    'Use verified spend and revenue first, then use the model as a directional check.',
 };
 
 export const dataSources: DataSource[] = [
@@ -389,23 +389,23 @@ export const regressionImpacts: RegressionImpact[] = [
     feature: 'Paid Social',
     coefficient: 1.05,
     narrative:
-      'The saved notebook output shows a positive coefficient, but it conflicts with the channel\'s weak descriptive ROAS and should be treated cautiously.',
+      'The coefficient is positive, but it conflicts with the weak KPI story and should be treated cautiously.',
   },
   {
     feature: 'Search',
     coefficient: 0.81,
-    narrative: 'Search is directionally the most consistent across both the descriptive KPI layer and the regression diagnostic.',
+    narrative: 'Search is the most consistent across both the KPI layer and the regression diagnostic.',
   },
   {
     feature: 'Referral',
     coefficient: -0.12,
-    narrative: 'Referral shows limited standalone incremental signal in the saved model output and should not drive budget decisions alone.',
+    narrative: 'Referral shows limited standalone signal and should not drive budget decisions alone.',
   },
   {
     feature: 'Email',
     coefficient: -3.71,
     narrative:
-      'The negative sign conflicts with Email\'s observed ROAS, signaling multicollinearity or endogeneity rather than a trustworthy causal effect.',
+      'The negative sign conflicts with observed ROAS, so this is a model warning, not a causal finding.',
   },
 ];
 
@@ -473,22 +473,22 @@ export const recommendations: Recommendation[] = [
   {
     title: 'Reduce overspend in Paid Social',
     detail:
-      'Paid Social still matters for discovery, but its descriptive ROAS and revenue share lagged its budget weight, making it the clearest place to investigate controlled spend reduction.',
+      'Paid Social still matters for discovery, but it is the clearest place to test disciplined spend reduction.',
   },
   {
     title: 'Increase Email investment carefully',
     detail:
-      'Email combined strong observed ROAS with a small spend base, but the regression output was unstable, so any scale-up should happen through measured testing rather than blind expansion.',
+      'Email showed strong observed ROAS, but expansion should happen through measured testing, not blind scaling.',
   },
   {
     title: 'Protect Search as a capture layer',
     detail:
-      'Search delivered the largest revenue base and the most internally consistent signal across reporting and diagnostics, so it should remain the core demand-capture layer.',
+      'Search delivered the largest revenue base and the most stable signal, so it should remain the core capture layer.',
   },
   {
     title: 'Operationalize testing and monitoring',
     detail:
-      'Use weekly pacing checks, fatigue monitoring, and structured incrementality tests to validate any reallocation before locking in a new budget mix.',
+      'Use pacing checks, fatigue monitoring, and incrementality tests before locking a new mix.',
   },
 ];
 

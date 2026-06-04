@@ -14,8 +14,7 @@ export const RecruiterCTASection = () => (
                 Hiring for business analytics, marketing strategy, or BI storytelling?
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">
-                This portfolio is designed to make my thinking legible quickly: how I frame commercial problems,
-                structure data, validate evidence, and turn analysis into clear stakeholder recommendations.
+                This portfolio shows how I frame problems, validate evidence, and turn analysis into decisions.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
