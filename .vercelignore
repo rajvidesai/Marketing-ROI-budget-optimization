@@ -12,3 +12,4 @@ Readme (1).md
 *.ipynb
 *.pbix
 *.pdf
+!public/resume.pdf
