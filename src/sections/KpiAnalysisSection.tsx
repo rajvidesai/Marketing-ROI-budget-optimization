@@ -96,8 +96,8 @@ export const KpiAnalysisSection = () => (
                     contentStyle={{
                       borderRadius: '18px',
                       border: '1px solid rgba(148, 163, 184, 0.18)',
-                      background: 'rgba(15, 23, 42, 0.92)',
-                      color: '#fff',
+                      background: 'rgba(255, 255, 255, 0.95)',
+                      color: '#111827',
                     }}
                   />
                   <Line
@@ -143,8 +143,8 @@ export const KpiAnalysisSection = () => (
                     contentStyle={{
                       borderRadius: '18px',
                       border: '1px solid rgba(148, 163, 184, 0.18)',
-                      background: 'rgba(15, 23, 42, 0.92)',
-                      color: '#fff',
+                      background: 'rgba(255, 255, 255, 0.95)',
+                      color: '#111827',
                     }}
                   />
                   <Bar dataKey="spend" radius={[10, 10, 0, 0]} fill="#94a3b8" />
